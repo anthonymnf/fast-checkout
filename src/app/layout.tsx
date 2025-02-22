@@ -1,5 +1,6 @@
 import "./globals.css";
 
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { Toaster } from "sonner";
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body className={`${poppins.className} antialiased`}>
         <CartProvider>{children}</CartProvider>
         <Toaster />
+        <SpeedInsights />
       </body>
     </html>
   );
